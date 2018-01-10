@@ -1,0 +1,9 @@
+1) Procedural texture mapping
+
+1,How are the textures coordinates mapped on the bunny? Can you see what geometry was used?
+
+defined in model's texCoord data
+
+2,What kind of procedural texture did you make?
+
+out_Color = vec4(myTexCoord[0],myTexCoord[1],0.0f,1.0f);

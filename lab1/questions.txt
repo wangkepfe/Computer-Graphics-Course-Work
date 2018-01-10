@@ -1,0 +1,94 @@
+lab1
+1) Setup and getting acquainted with the lab shell
+
+1,Where is the origin placed in the on-screen coordinate system?
+
+center
+
+2,Which direction are the X and Y axes pointing in the on-screen coordinate system?
+
+X to right
+Y to up
+
+3,The triangle color is controlled from the fragment shader. Would it be possible to control it from the main program? How?
+
+yes. Upload control variables to fragment shader
+
+2) Transformations in the vertex shader
+
+1,What is the purpose of the "in", "out" and "uniform" modifiers?
+
+"in" in vertex shader get input from main program,
+"out" in vertex shader output to fragment shader;
+"in" in fragment shader get input from vertex shader.
+"out" in fragment shader output the color.
+"uniform" is global, can be used both in vertex shader and fragment shader.
+
+2,What is the output of the vertex shader?
+
+the position of the vertices
+
+3,What does the function glUniformMatrix4fv do?
+
+upload a 4 by 4 float matrix to shaders.
+
+3) Simple animation
+
+What is the frame rate of the animation?
+50fps
+
+4) Color shading
+
+1,Did you need to do anything different when uploading the color data?
+
+pass the color data from main program to vertex shader, and then pass them to fragment shader
+
+2,The "in" and "out" modifiers are now used for something different. What?
+
+"in" in vertex shader get input from main program,
+"out" in vertex shader output to fragment shader;
+"in" in fragment shader get input from vertex shader.
+"out" in fragment shader output the color.
+
+3,What is this kind of shading called? What could we use otherwise?
+
+color shading.
+we can use light shading(diffuse, specular) otherwise.
+
+5) Building a cube, visible surface detection
+
+1,What problems did you encounter while building the cube?
+
+no problems
+
+2,How do you change the facing of a polygon?
+
+using Z buffer
+
+6) Load a 3D model from disc
+
+1,Why do we need normal vectors for a model?
+
+for lighting effect
+
+2,What did you do in your fragment shader?
+
+we used normal vector to calculate the color
+out_color = vec4(myNormal[0],myNormal[1],myNormal[2],1);
+
+3,Should a normal vector always be perpendicular to a certain triangle? If not, why?
+
+yes.
+
+4,Now we are using glBindBuffer and glBufferData again. They deal with buffers, but in what way?
+
+bind the buffers to VAO
+
+
+
+
+
+
+
+
+
